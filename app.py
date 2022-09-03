@@ -12,8 +12,8 @@ app=Flask(__name__)
 
 app.config['SECRET_KEY'] = 'mysecretkey'
 
-logistic=pickle.load(open('Notebook/model.pkl','rb'))
-cv=pickle.load(open('Notebook/cv.pkl','rb'))
+logistic=pickle.load(open('model.pkl','rb'))
+cv=pickle.load(open('cv.pkl','rb'))
 
 def predict_sentiment(tweet):
     tweet = process_tweet(tweet)
